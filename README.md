@@ -12135,7 +12135,9 @@ Top-10 самых больших файлов
 Команды:
 
 ```sh
+
 du -h ~/boost-libs/* | sort -hr | head -n 10
+
 ```
 
 <details>
