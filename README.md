@@ -2065,7 +2065,7 @@ cd ~/boost_1_69_0
 <details>
   <summary>Вывод команды </summary>
  
-
+Смотреть документ Exersize 8
 </details>
 
 ## Шаг 9
