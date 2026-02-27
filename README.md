@@ -31,9 +31,7 @@ $ mkdir -p workspace/projects/
 $ mkdir -p workspace/reports/
 $ cd workspace
 ```
-Результат работы команд:
 
-<img width="881" height="577" alt="Снимок экрана 2026-02-24 104357" src="https://github.com/user-attachments/assets/180835e9-4245-45af-8a10-90f7d8e32261" />
 
 
 В данном блоке производится загрузка, распаковка и подготовка среды выполнения Node.js для локального использования без системной установки.
@@ -45,9 +43,6 @@ $ rm -rf node-v6.11.5-linux-x64.tar.xz
 $ mv node-v6.11.5-linux-x64 node
 ```
 
-Результат работы команд:
-
-<img width="892" height="556" alt="Снимок экрана 2026-02-24 105208" src="https://github.com/user-attachments/assets/9f49a77c-3c50-4447-9914-1d1bc536dbac" />
 
 
 Выполняется добавление директории с исполняемыми файлами Node.js в переменную окружения. Выводим содержимое папки node/bin и значение переменной окружения PATH.
@@ -69,15 +64,26 @@ $ source scripts/activate
 export PATH=\${PATH}:`pwd`/node/bin
 EOF`:
 
-<img width="888" height="186" alt="Снимок экрана 2026-02-24 111846" src="https://github.com/user-attachments/assets/f74c9d9a-5caa-40c7-acb1-d15f011cbba2" />
+```sh
+export PATH=${PATH}:/home/ilya_ilyasov/Ilya/workspace/node/bin
+```
 
 
 Установка утилиты gist через Ruby
 ```sh
 $ gem install gist
 ```
-<img width="756" height="247" alt="Снимок экрана 2026-02-24 115408" src="https://github.com/user-attachments/assets/03492fac-9c32-4e53-abbd-d22afdc7f481" />
+Результат работы команды:
 
+```sh
+ilya_ilyasov@Ubuntu:~$ sudo gem install gist
+[sudo] password for ilya_ilyasov: 
+Successfully installed gist-6.0.0
+Parsing documentation for gist-6.0.0
+Done installing documentation for gist after 0 seconds
+1 gem installed
+
+```
 
 Токен доступа GitHub сохраняется в конфигурационный файл с ограниченными правами доступа.
 ```sh
@@ -213,7 +219,7 @@ find ~/boost_1_69_0 -maxdepth 1 -type f | wc -l
 
 <details>
   <summary>Вывод команды </summary>
- <img width="911" height="58" alt="Снимок экрана 2026-02-24 193627" src="https://github.com/user-attachments/assets/20daded3-cb97-461a-a3eb-dbe09409f69f" />
+17
 
 
 </details>
@@ -229,7 +235,7 @@ find ~/boost_1_69_0 -type f | wc -l
 
 <details>
   <summary>Вывод команды </summary>
-  <img width="733" height="59" alt="image" src="https://github.com/user-attachments/assets/1f0fd5aa-b534-456b-9def-c9fa5f887f86" />
+  62151
 
 </details>
 
@@ -251,7 +257,10 @@ echo "Остальных: $other_count"
 
 <details>
   <summary>Вывод команды </summary>
-  <img width="957" height="308" alt="image" src="https://github.com/user-attachments/assets/c9d8fca5-b7cc-4db7-a2b3-768c28f1982a" />
+  Заголовочных .hpp: 14912
+Файлов .cpp: 13789
+Остальных: 33450
+
 
 </details>
 
@@ -267,7 +276,17 @@ find ~/boost_1_69_0 -name "any.hpp" -type f
 
 <details>
   <summary>Вывод команды </summary>
-  <img width="717" height="402" alt="image" src="https://github.com/user-attachments/assets/66b03ac4-e22e-4cab-ac27-7fd3bd9be754" />
+/home/ilya_ilyasov/boost_1_69_0/boost/proto/detail/any.hpp <br>
+/home/ilya_ilyasov/boost_1_69_0/boost/spirit/home/support/algorithm/any.hpp   <br>
+/home/ilya_ilyasov/boost_1_69_0/boost/hana/fwd/any.hpp   <br>
+/home/ilya_ilyasov/boost_1_69_0/boost/hana/any.hpp   <br>
+/home/ilya_ilyasov/boost_1_69_0/boost/type_erasure/any.hpp  <br>  
+/home/ilya_ilyasov/boost_1_69_0/boost/any.hpp   <br>
+/home/ilya_ilyasov/boost_1_69_0/boost/xpressive/detail/utility/any.hpp   <br>
+/home/ilya_ilyasov/boost_1_69_0/boost/fusion/include/any.hpp   <br>
+/home/ilya_ilyasov/boost_1_69_0/boost/fusion/algorithm/query/detail/any.hpp  <br>  
+/home/ilya_ilyasov/boost_1_69_0/boost/fusion/algorithm/query/any.hpp   <br>
+
 
 </details>
 
@@ -2065,7 +2084,7 @@ cd ~/boost_1_69_0
 <details>
   <summary>Вывод команды </summary>
  
-Смотреть документ Exersize 8
+Смотреть документ [Exersize 8]( https://github.com/ferdosiakrymskaa-svg/lab01/blob/f51a9456e28c619ee8dff5fdfe28d6b65dbcbb1a/Exercize%208 "Перейти к файлу Exersize 8")
 </details>
 
 ## Шаг 9
@@ -2077,12 +2096,7 @@ mkdir -p ~/boost-libs
 cp stage/lib/*.a ~/boost-libs/
 ```
 
-<details>
-  <summary>Вывод команды </summary>
-  <img width="717" height="402" alt="image" src="https://github.com/user-attachments/assets/3452cd50-ba6c-41f7-89dc-b00bb8a2fe35" />
 
-
-</details>
 
 ## Шаг 10
 Размер каждого файла в ~/boost-libs
@@ -2094,44 +2108,44 @@ du -h ~/boost-libs/*
 
 <details>
   <summary>Вывод команды </summary>
-  4.0K	/home/ilya_ilyasov/boost-libs/libboost_atomic.a
-236K	/home/ilya_ilyasov/boost-libs/libboost_chrono.a
-148K	/home/ilya_ilyasov/boost-libs/libboost_container.a
-24K	/home/ilya_ilyasov/boost-libs/libboost_context.a
-332K	/home/ilya_ilyasov/boost-libs/libboost_contract.a
-184K	/home/ilya_ilyasov/boost-libs/libboost_coroutine.a
-152K	/home/ilya_ilyasov/boost-libs/libboost_date_time.a
-4.0K	/home/ilya_ilyasov/boost-libs/libboost_exception.a
-232K	/home/ilya_ilyasov/boost-libs/libboost_fiber.a
-416K	/home/ilya_ilyasov/boost-libs/libboost_filesystem.a
-848K	/home/ilya_ilyasov/boost-libs/libboost_graph.a
-172K	/home/ilya_ilyasov/boost-libs/libboost_iostreams.a
-2.0M	/home/ilya_ilyasov/boost-libs/libboost_locale.a
-4.2M	/home/ilya_ilyasov/boost-libs/libboost_log.a
-2.6M	/home/ilya_ilyasov/boost-libs/libboost_log_setup.a
-544K	/home/ilya_ilyasov/boost-libs/libboost_math_c99.a
-448K	/home/ilya_ilyasov/boost-libs/libboost_math_c99f.a
-464K	/home/ilya_ilyasov/boost-libs/libboost_math_c99l.a
-2.7M	/home/ilya_ilyasov/boost-libs/libboost_math_tr1.a
-2.6M	/home/ilya_ilyasov/boost-libs/libboost_math_tr1f.a
-2.7M	/home/ilya_ilyasov/boost-libs/libboost_math_tr1l.a
-212K	/home/ilya_ilyasov/boost-libs/libboost_prg_exec_monitor.a
-1.6M	/home/ilya_ilyasov/boost-libs/libboost_program_options.a
-80K	/home/ilya_ilyasov/boost-libs/libboost_random.a
-2.7M	/home/ilya_ilyasov/boost-libs/libboost_regex.a
-1.2M	/home/ilya_ilyasov/boost-libs/libboost_serialization.a
-24K	/home/ilya_ilyasov/boost-libs/libboost_stacktrace_addr2line.a
-20K	/home/ilya_ilyasov/boost-libs/libboost_stacktrace_backtrace.a
-16K	/home/ilya_ilyasov/boost-libs/libboost_stacktrace_basic.a
-4.0K	/home/ilya_ilyasov/boost-libs/libboost_stacktrace_noop.a
-4.0K	/home/ilya_ilyasov/boost-libs/libboost_system.a
-2.3M	/home/ilya_ilyasov/boost-libs/libboost_test_exec_monitor.a
-452K	/home/ilya_ilyasov/boost-libs/libboost_thread.a
-56K	/home/ilya_ilyasov/boost-libs/libboost_timer.a
-176K	/home/ilya_ilyasov/boost-libs/libboost_type_erasure.a
-2.3M	/home/ilya_ilyasov/boost-libs/libboost_unit_test_framework.a
-4.5M	/home/ilya_ilyasov/boost-libs/libboost_wave.a
-796K	/home/ilya_ilyasov/boost-libs/libboost_wserialization.a
+  4.0K	/home/ilya_ilyasov/boost-libs/libboost_atomic.a <br> 
+236K	/home/ilya_ilyasov/boost-libs/libboost_chrono.a<br>
+148K	/home/ilya_ilyasov/boost-libs/libboost_container.a <br>
+24K	/home/ilya_ilyasov/boost-libs/libboost_context.a <br>
+332K	/home/ilya_ilyasov/boost-libs/libboost_contract.a <br>
+184K	/home/ilya_ilyasov/boost-libs/libboost_coroutine.a <br>
+152K	/home/ilya_ilyasov/boost-libs/libboost_date_time.a <br>
+4.0K	/home/ilya_ilyasov/boost-libs/libboost_exception.a <br>
+232K	/home/ilya_ilyasov/boost-libs/libboost_fiber.a <br>
+416K	/home/ilya_ilyasov/boost-libs/libboost_filesystem.a <br>
+848K	/home/ilya_ilyasov/boost-libs/libboost_graph.a <br>
+172K	/home/ilya_ilyasov/boost-libs/libboost_iostreams.a <br>
+2.0M	/home/ilya_ilyasov/boost-libs/libboost_locale.a <br>
+4.2M	/home/ilya_ilyasov/boost-libs/libboost_log.a <br>
+2.6M	/home/ilya_ilyasov/boost-libs/libboost_log_setup.a <br>
+544K	/home/ilya_ilyasov/boost-libs/libboost_math_c99.a <br>
+448K	/home/ilya_ilyasov/boost-libs/libboost_math_c99f.a <br>
+464K	/home/ilya_ilyasov/boost-libs/libboost_math_c99l.a <br>
+2.7M	/home/ilya_ilyasov/boost-libs/libboost_math_tr1.a <br>
+2.6M	/home/ilya_ilyasov/boost-libs/libboost_math_tr1f.a <br>
+2.7M	/home/ilya_ilyasov/boost-libs/libboost_math_tr1l.a <br>
+212K	/home/ilya_ilyasov/boost-libs/libboost_prg_exec_monitor.a <br>
+1.6M	/home/ilya_ilyasov/boost-libs/libboost_program_options.a <br>
+80K	/home/ilya_ilyasov/boost-libs/libboost_random.a <br>
+2.7M	/home/ilya_ilyasov/boost-libs/libboost_regex.a <br>
+1.2M	/home/ilya_ilyasov/boost-libs/libboost_serialization.a <br>
+24K	/home/ilya_ilyasov/boost-libs/libboost_stacktrace_addr2line.a <br>
+20K	/home/ilya_ilyasov/boost-libs/libboost_stacktrace_backtrace.a <br>
+16K	/home/ilya_ilyasov/boost-libs/libboost_stacktrace_basic.a <br>
+4.0K	/home/ilya_ilyasov/boost-libs/libboost_stacktrace_noop.a <br>
+4.0K	/home/ilya_ilyasov/boost-libs/libboost_system.a <br>
+2.3M	/home/ilya_ilyasov/boost-libs/libboost_test_exec_monitor.a <br>
+452K	/home/ilya_ilyasov/boost-libs/libboost_thread.a <br>
+56K	/home/ilya_ilyasov/boost-libs/libboost_timer.a <br>
+176K	/home/ilya_ilyasov/boost-libs/libboost_type_erasure.a <br>
+2.3M	/home/ilya_ilyasov/boost-libs/libboost_unit_test_framework.a <br>
+4.5M	/home/ilya_ilyasov/boost-libs/libboost_wave.a <br>
+796K	/home/ilya_ilyasov/boost-libs/libboost_wserialization.a <br>
 
 </details>
 
@@ -2148,15 +2162,15 @@ du -h ~/boost-libs/* | sort -hr | head -n 10
 
 <details>
   <summary>Вывод команды </summary>
-  4.5M	/home/ilya_ilyasov/boost-libs/libboost_wave.a
-4.2M	/home/ilya_ilyasov/boost-libs/libboost_log.a
-2.7M	/home/ilya_ilyasov/boost-libs/libboost_regex.a
-2.7M	/home/ilya_ilyasov/boost-libs/libboost_math_tr1l.a
-2.7M	/home/ilya_ilyasov/boost-libs/libboost_math_tr1.a
-2.6M	/home/ilya_ilyasov/boost-libs/libboost_math_tr1f.a
-2.6M	/home/ilya_ilyasov/boost-libs/libboost_log_setup.a
-2.3M	/home/ilya_ilyasov/boost-libs/libboost_unit_test_framework.a
-2.3M	/home/ilya_ilyasov/boost-libs/libboost_test_exec_monitor.a
-2.0M	/home/ilya_ilyasov/boost-libs/libboost_locale.a
+  4.5M	/home/ilya_ilyasov/boost-libs/libboost_wave.a <br>
+4.2M	/home/ilya_ilyasov/boost-libs/libboost_log.a <br>
+2.7M	/home/ilya_ilyasov/boost-libs/libboost_regex.a <br>
+2.7M	/home/ilya_ilyasov/boost-libs/libboost_math_tr1l.a <br>
+2.7M	/home/ilya_ilyasov/boost-libs/libboost_math_tr1.a <br>
+2.6M	/home/ilya_ilyasov/boost-libs/libboost_math_tr1f.a <br>
+2.6M	/home/ilya_ilyasov/boost-libs/libboost_log_setup.a <br>
+2.3M	/home/ilya_ilyasov/boost-libs/libboost_unit_test_framework.a <br>
+2.3M	/home/ilya_ilyasov/boost-libs/libboost_test_exec_monitor.a <br>
+2.0M	/home/ilya_ilyasov/boost-libs/libboost_locale.a <br>
 
 </details>
